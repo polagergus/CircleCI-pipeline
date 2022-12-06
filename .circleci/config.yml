@@ -164,6 +164,7 @@ jobs:
             npm install
             npm audit fix --force --audit-level=cirtical
             npm audit fix --force --audit-level=cirtical
+            npm audit fix --force --audit-level=cirtical
             npm audit --audit-level=critical
           
   deploy-infrastructure:
@@ -205,7 +206,7 @@ jobs:
           paths:
             - project/.circleci/ansible/inventory.txt
 
-      #- destroy-environment
+      - destroy-environment
           
   configure-infrastructure:
    docker:
